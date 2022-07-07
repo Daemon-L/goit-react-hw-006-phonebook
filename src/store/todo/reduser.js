@@ -1,7 +1,7 @@
 import { ADD_TODO, REMOVE_TODO } from './action-types';
 
 const initialState = {
-    list: [1]
+    list: []
 };
 
 const reduser = (state = initialState, action) => {
