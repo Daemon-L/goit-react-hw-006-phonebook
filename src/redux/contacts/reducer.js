@@ -10,11 +10,11 @@ const reducer = createReducer(
     initialState, builder => {
         builder
         .addCase(addContacts, (state, action) => {
-            const { id, name, numder } = action.payload;
+            const { id, name, number } = action.payload;
             state.items.push({
                 id,
                 name,
-                numder
+                number
             })
         })
         .addCase(removeContacts, (state, action) => {

@@ -1,11 +1,11 @@
 import { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodoNew } from '../store/todoNew/actionsNew';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { addTodoNew } from '../store/todoNew/actionsNew';
 import { getTodosList } from '../store/todoNew/selectors';
 
 import { v4 } from 'uuid';

@@ -10,6 +10,10 @@ import { useState } from "react";
 import { nanoid } from 'nanoid';
 // ********************** **********************************
 
+import ContactFormNew from './components/ContactForm/FormNew';
+
+import ContactsListNew from './components/ContactList/ContactsListNew';
+
 const startingContacts = [];
 
 export default function App() {
@@ -57,6 +61,9 @@ export default function App() {
                 contacts={getVisibleContacts()}
                 onDeleteContact={deleteContact}
             />
+            <ContactFormNew />
+            <h2>Contacts 2</h2>
+            <ContactsListNew/>
         </Container>
     );
 }
