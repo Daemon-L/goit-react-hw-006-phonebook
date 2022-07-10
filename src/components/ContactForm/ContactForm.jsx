@@ -22,12 +22,6 @@ export default function ContactForm({onSubmit}) {
         reset();
     };
 
-    // const handleSubmit = (evt) => {
-    //     evt.preventDefault();
-    //     onSubmit( name, number );
-    //     reset();
-    // };
-
     const reset = () => {
         setName("");
         setNumber("");
@@ -40,6 +34,7 @@ export default function ContactForm({onSubmit}) {
                 <Input
                     type="text"
                     name="name"
+
                     value={name}
                     onChange={handleChange}
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -47,6 +42,7 @@ export default function ContactForm({onSubmit}) {
                     required
                 />  
             </label>
+            
             <label>
                 <Text>Number</Text>
                 <Input

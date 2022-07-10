@@ -1,18 +1,16 @@
-import todosReducer from './todoNew/index';
-import { configureStore } from "@reduxjs/toolkit";
-import {  combineReducers } from "redux";
-
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
-  persistStore,
-  persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-} from 'redux-persist'
+    persistStore,
+    persistReducer,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
+} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import contactsReducer from './contacts/reducer';
 
 const persistConfig = {
   key: 'root',
@@ -21,10 +19,10 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-  todos: todosReducer,
+  contacts: contactsReducer,
 });
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
