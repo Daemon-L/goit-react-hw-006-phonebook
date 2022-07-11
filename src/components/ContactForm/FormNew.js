@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { FormContainer, Text, Input, Button } from './Form.styled'
 
@@ -18,14 +18,11 @@ const ContactFormNew = () => {
             contact => contact.name.toLowerCase() === name.toLowerCase()
         )
         ) {
-        reset();
-            alert(`${name} is already in contacts`);
+           alert(`${name} is already in contacts`);
         } else {
         dispatch(
             addContacts({
-                id: v4(),
-                name,
-                number,
+                id: v4(), name, number,
             })
         );}
         reset();
@@ -66,5 +63,4 @@ const ContactFormNew = () => {
         </FormContainer>
     )
 };
-
 export default ContactFormNew;

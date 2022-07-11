@@ -7,24 +7,21 @@ const ContactsListNew = () => {
     const dispatch = useDispatch();
     const contacts = useSelector(getContactsList);
     const filter = useSelector(getContactsFilter);
-
-    const onItemRemove = (id) => {
-        dispatch(removeContacts({ id }))
-    };
+    const onItemRemove = id => {dispatch(removeContacts({ id }))};
 
     return (
         <ul>
             {contacts.map(({ id, name, number }) =>
-                <ContactItem key={id}>
-                    <Text>{name}: {number}</Text>
-                    <Button type="button"
-                            onClick={() => onItemRemove(id)}>
-                        Delete
-                    </Button>
-                </ContactItem>
+                name.toLowerCase().indexOf(filter.toLowerCase()) !== -1 && (
+                    <ContactItem key={id}>
+                        <Text>{name}: {number}</Text>
+                        <Button type="button" onClick={() => onItemRemove(id)}>
+                            Delete
+                        </Button>
+                    </ContactItem>
+                )
             )}
         </ul>
     );
 };
-
 export default ContactsListNew;

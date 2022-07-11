@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
-
     width: 350px;
     padding: 10px;
     border: 2px solid black;
@@ -26,7 +25,6 @@ export const Button = styled.button`
     border: 2px solid gray;
     border-radius: 4px;
     cursor: pointer;
-    
     :hover {
         background-color: #7ea3e9;
     }

@@ -16,14 +16,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider>
   </React.StrictMode>
 );
-
-// reduxToolkitStore.dispatch(addTodoNew({
-//   id: 1,
-//   content: 'some content2'
-// }))
-// reduxToolkitStore.dispatch(removeTodoNew({
-//   id: 2,
-// }));
-// reduxToolkitStore.subscribe(() => {
-//   console.log(reduxToolkitStore.getState());
-// });
