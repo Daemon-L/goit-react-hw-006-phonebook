@@ -1,0 +1,8 @@
+1. npm install --save styled-components
+2. npm install --save prop-types
+_______________________________________________
+
+3. npm install redux
+4. npm install react-redux
+5. npm install --save redux-persist  (запись в локалстор)
++ v4() ???  (генератор с id лекции)

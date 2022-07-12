@@ -17,8 +17,9 @@ const ContactFormNew = () => {
         if (contacts.find(
             contact => contact.name.toLowerCase() === name.toLowerCase()
         )
-        ) {
-           alert(`${name} is already in contacts`);
+        ) { 
+            alert(`${name} is already in contacts`);
+            return;
         } else {
         dispatch(
             addContacts({
